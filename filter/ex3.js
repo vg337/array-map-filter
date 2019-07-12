@@ -22,8 +22,12 @@ Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
  */
-
-function keepStarks(names) {
+const tableau = ['Bran Stark','Cersei Lannister','Sandor Clegane','Arya Stark','Yara Greyjoy', 'Sansa Stark']
+function keepStarks(tableau) {
+    const starks = tableau.filter(function(name){
+        return name.endsWith('Stark');
+    });
+    return starks;
 }
 
 // Ne pas modifier l'export

@@ -27,7 +27,18 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+  const filterMsg = comments.filter(function (mots) {
+      let hasBadWord = false;
+      for (let i = 0; i < bannedWords.length; i++) {
+        if (mots.toLowerCase().includes(bannedWords[i].toLowerCase())) {
+          hasBadWord = true;
+        }
+      }
+      if (hasBadWord == false) {
+        return mots;
+      }
+  });
+  return filterMsg;
 }
-
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;

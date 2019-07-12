@@ -11,24 +11,20 @@ maximum.
 
 Exemple d'entrée:
 
-1. tableau de produits:
-[
-  { name: 'iPhone X', price: 1159 },
-  { name: 'Xiaomi Mi A2', price: 209 },
-  { name: 'Samsung Galaxy Note 9', price: 992 },
-  { name: 'Huawei P20', price: 480 },
-  { name: 'Huawei P20 Pro', price: 649 }
-]
-2. prix maximum: 500
+
 
 Sortie attendue:
   [
-    { name: 'Xiaomi Mi A2', price: 209 },
-    { name: 'Huawei P20', price: 480 }
+    { 'Xiaomi Mi A2', 209 },
+    { 'Huawei P20', 480 }
   ]
- */
+*/
 
 function filterOnPrice(products, maxPrice) {
+    const basPrix = products.filter(function(product){
+        return product.price <= maxPrice;
+    });
+    return basPrix;
 }
 
 // Ne pas modifier l'export

@@ -15,7 +15,11 @@ Exemple d'entrée:
 
  */
 
-function getMultiplesOf(numbers, n) {
+function getMultiplesOf(tableau, n) {
+    const result = tableau.filter(function(numbers){
+            return numbers%n == 0;
+        });
+    return result;
 }
 
 // Ne pas modifier l'export
