@@ -25,6 +25,14 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
+    var tableau = campuses.filter(function(type){
+        if (type.curriculums.includes("JS/React")){
+        return type;
+        }
+    });
+    return tableau.map(function(ville){
+        return ville.city;
+    });
 }
 
 module.exports = getCampusesTeachingReact;

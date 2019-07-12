@@ -23,6 +23,14 @@ Sortie attendue:
 */
 
 function getJedisNames(characters) {
+    var tableau = characters.filter(function(person){
+        if (person.side == "light"){
+        return person;
+        }
+    });
+    return tableau.map(function(good){
+        return good.name;
+    });
 }
 
 module.exports = getJedisNames;
